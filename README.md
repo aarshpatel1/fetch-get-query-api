@@ -14,6 +14,11 @@ After selecting any dog breed (example: I selected Husky here), the website look
 
 ![Website Screenshot](screenshots/screenshot2.png)
 
+In mobile screen, website looks like
+
+![Website Screenshot](screenshots/screenshot3.png)
+
+
 ## Features
 
 - Simple user interface with an input field to search data.
