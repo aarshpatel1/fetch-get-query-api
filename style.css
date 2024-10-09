@@ -20,3 +20,9 @@
 #img-container:hover img {
     transform: rotateY(180deg);
 }
+
+@media(min-width:992px) {
+    select {
+        width: 25% !important;
+    }
+}
