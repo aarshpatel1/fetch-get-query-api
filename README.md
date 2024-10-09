@@ -6,6 +6,14 @@ This project demonstrates the use of the Fetch API to retrieve data using GET re
 
 You can view the live demo of this project here: [Fetch GET Query API Demo](https://aarshpatel1.github.io/fetch-get-query-api/)
 
+After loading the website, the first look
+
+![Website Screenshot](screenshots/screenshot1.png)
+
+After selecting any dog breed (example: I selected Husky here), the website look
+
+![Website Screenshot](screenshots/screenshot2.png)
+
 ## Features
 
 - Simple user interface with an input field to search data.
