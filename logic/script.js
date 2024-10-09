@@ -50,45 +50,45 @@
 //     });
 // });
 
-// const breedDropdown = document.getElementById("breed-dropdown");
-// const dogImage = document.getElementById("dog-image");
+const breedDropdown = document.getElementById("breed-dropdown");
+const dogImage = document.getElementById("dog-image");
 
-// fetch("https://dog.ceo/api/breeds/list/all")
-//   .then((response) => response.json())
-//   .then((data) => {
-//     const breeds = Object.keys(data.message);
-//     breeds.forEach((breed) => {
-//       const options = document.createElement("option");
-//       options.value = breed;
-//       options.textContent = breed;
-//       breedDropdown.appendChild(options);
-//     });
-//   })
-//   .catch((error) => {
-//     console.error("Error fetching the breed : " + error);
-//   });
+fetch("https://dog.ceo/api/breeds/list/all")
+  .then((response) => response.json())
+  .then((data) => {
+    const breeds = Object.keys(data.message);
+    breeds.forEach((breed) => {
+      const options = document.createElement("option");
+      options.value = breed;
+      options.textContent = breed;
+      breedDropdown.appendChild(options);
+    });
+  })
+  .catch((error) => {
+    console.error("Error fetching the breed : " + error);
+  });
 
-// breedDropdown.addEventListener("change", (event) => {
-//   const selectBreed = event.target.value;
+breedDropdown.addEventListener("change", (event) => {
+  const selectBreed = event.target.value;
 
-//   if (selectBreed !== "Select a breed") {
-//     // query parameter
-//     fetch(`https://dog.ceo/api/breed/${selectBreed}/images/random`)
-//       .then((response) => response.json())
-//       .then((data) => {
-//         const image = document.createElement("img");
-//         image.src = data.message;
-//         image.style.maxWidth = "300px";
-//         image.style.maxHeight = "300px";
+  if (selectBreed !== "Select a breed") {
+    // query parameter
+    fetch(`https://dog.ceo/api/breed/${selectBreed}/images/random`)
+      .then((response) => response.json())
+      .then((data) => {
+        const image = document.createElement("img");
+        image.src = data.message;
+        image.style.maxWidth = "300px";
+        image.style.maxHeight = "300px";
 
-//         dogImage.innerHTML = "";
-//         dogImage.appendChild(image);
-//       })
-//       .catch((error) => {
-//         console.log(error);
-//       });
-//   }
-// });
+        dogImage.innerHTML = "";
+        dogImage.appendChild(image);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }
+});
 
 // const button = document.getElementById("btn-get-sub-breed");
 // const list = document.getElementById("sub-breed-list");
@@ -113,15 +113,15 @@
 //     });
 // });
 
-// callback function
-function fun(name, callback) {
-  // parameter
-  console.log("outter fun " + name);
-  callback();
-}
+// callback function concept
+// function fun(name, callback) {
+//   // parameter
+//   console.log("outter fun " + name);
+//   callback();
+// }
 
-function fun1() {
-  console.log("Hello");
-}
+// function fun1() {
+//   console.log("Hello");
+// }
 
-fun("Arti", fun1); // argument
+// fun("Arti", fun1); // argument
