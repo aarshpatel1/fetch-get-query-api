@@ -28,7 +28,7 @@ breedList.addEventListener("change", (event) => {
                 const imgContainer = document.getElementById("img-container")
                 imgContainer.innerHTML = ""
                 imgContainer.innerHTML = `
-                    <img src="${breedData.message}" alt="${selectedBreed}">
+                    <img src="${breedData.message}" alt="${selectedBreed}" class="shadow-lg">
                 `
             })
             .catch((error) => console.log(error))
